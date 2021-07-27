@@ -53,7 +53,7 @@ cron.schedule('0 */3 * * * *', ()=>{
         if(error){
             log.error(`Failed to run http(s) request.`);
             log.error(`${error}`);
-            process.exit(0);
+            return
         };
         
         log.info(`succeed to http(s) requset. \nresponce code : ${response.statusCode} \nbody: ${body}`);
@@ -63,7 +63,7 @@ cron.schedule('0 */3 * * * *', ()=>{
         }catch(error){
             log.error(`Failed to parse text to json.`);
             log.error(`${error}`);
-            process.exit(0);
+            return
         };
 
         if(resultData.ip != ipData.ip){
