@@ -9,12 +9,9 @@ ran by node.js
 */
 
 module.exports = function(content,beforeIP,afterIP){
-        console.log(beforeIP);
-        console.log(afterIP);
         
         content = content.replace(/{beforeIP}/g, beforeIP);
         content = content.replace(/{afterIP}/g, afterIP);
 
-        console.log(content);
         return content;
 }
