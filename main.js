@@ -83,9 +83,7 @@ cron.schedule('0 */3 * * * *', ()=>{
                 if(error){
                     log.error(`Failed to sebd webhook. (https request).`);
                     log.error(`${error}`);
-                    return;
-                };
-                log.info(`succeed to http(s) requset. \nresponce code : ${response.statusCode} \nbody: ${body}`);
+                }else log.info(`succeed to http(s) requset. \nresponce code : ${response.statusCode} \nbody: ${body}`);
             });
             
             log.info(`{cyan}IP Address updated{reset}. BEFORE : {red}${ipData.ip}{reset} => AFTER : {green}${resultData.ip}`);
