@@ -81,7 +81,7 @@ cron.schedule('0 */3 * * * *', ()=>{
             
             request(webhookOption, (error, response, body)=>{
                 if(error){
-                    log.error(`Failed to sebd webhook. (https request).`);
+                    log.error(`Failed to send webhook. (https request).`);
                     log.error(`${error}`);
                 }else log.info(`succeed to http(s) requset. \nresponce code : ${response.statusCode} \nbody: ${body}`);
             });
