@@ -1,0 +1,10 @@
+{
+    "server1" : {
+        "hostIP" : "server ip/address",
+        "port" : "ssh port",
+        "username" : "ssh username",
+        "privateKeyPass" : "Only use one item, 'privateKey' or 'password'. privateKeyPass expect to set file pass for privateKey which use ssh session.",
+        "password" : "Only use one item, 'privateKey' or 'password'. password expect to set password hich use ssh session.",
+        "command" : "set bash command which run ssh session. Placeholder: {beforeIP} {afterIP}"
+    }
+}

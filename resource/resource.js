@@ -5,7 +5,7 @@ Cyclic Request
 resource.js
  
 ran by node.js
-2021-7-27
+2021-8-27
 */
 
 /*
@@ -52,5 +52,11 @@ module.exports =  {
                 default : ""
             }
         }
+    },
+
+    "sshSession.json" : {
+        pass : "./config/sshSession.json",
+        canEmpty : true,
+        keys : {}
     }
 }
